@@ -1,0 +1,7 @@
+[
+  {"task": "Wash dishes", "hour": 9, "day_of_week": 0},
+  {"task": "Write report", "hour": 14, "day_of_week": 1},
+  {"task": "Check emails", "hour": 10, "day_of_week": 2}
+]
+
+

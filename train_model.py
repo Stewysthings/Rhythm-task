@@ -1,34 +1,54 @@
-# train_model.py
 import torch
-from model import TaskPredictor
+import torch.nn as nn
+import torch.optim as optim
 import json
+from model import RhythmNet
+from datetime import datetime
 
-# Load data
-with open("data/tasks.json") as f:
-    tasks = json.load(f)
+# Load task logs
+with open("data/task_logs.json", "r") as f:
+    logs = json.load(f)
 
-# Encode days, hours, and task labels
-day_to_idx = {d: i for i, d in enumerate(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])}
-task_names = list(set(t["task"] for t in tasks))
-task_to_idx = {name: i for i, name in enumerate(task_names)}
+# Extract unique tasks and create mapping
+tasks = list(set([log["task"] for log in logs]))
+task_to_idx = {task: i for i, task in enumerate(tasks)}
 
-X, y = [], []
-for t in tasks:
-    day_idx = day_to_idx[t["day"]]
-    hour = t["hour"]
-    input_vec = [0]*7
-    input_vec[day_idx] = 1
-    input_vec.append(hour)
-    X.append(input_vec)
-    y.append(task_to_idx[t["task"]])
+# Prepare input (X) and target (y)
+X = []
+y = []
+
+prev_time = None  # Track previous task time in minutes since week start
+
+for log in logs:
+    hour = log["hour"] / 23.0  # Normalize hour 0-23 to 0-1
+    day = log["day_of_week"] / 6.0  # Normalize day_of_week 0-6 to 0-1
+
+    # Calculate minutes since last task
+    current_time = log["day_of_week"] * 1440 + log["hour"] * 60  # total minutes since week start
+
+    if prev_time is None:
+        minutes_since_last = 0
+    else:
+        diff = current_time - prev_time
+        # If negative (week wrap-around), add full week minutes
+        if diff < 0:
+            diff += 7 * 1440
+        minutes_since_last = diff
+
+    prev_time = current_time
+
+    minutes_since_last_norm = minutes_since_last / 1440  # Normalize by minutes in a day
+
+    X.append([hour, day, minutes_since_last_norm])
+    y.append(task_to_idx[log["task"]])
 
 X = torch.tensor(X, dtype=torch.float32)
 y = torch.tensor(y, dtype=torch.long)
 
 # Initialize model
-model = TaskPredictor(input_dim=8, num_tasks=len(task_names))
+model = RhythmNet(input_size=3, hidden_size=16, output_size=len(tasks))
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+optimizer = optim.Adam(model.parameters(), lr=0.01)
 
 # Training loop
 for epoch in range(200):
@@ -38,9 +58,9 @@ for epoch in range(200):
     loss.backward()
     optimizer.step()
     if epoch % 20 == 0:
-        print(f\"Epoch {epoch}, Loss: {loss.item():.4f}\")
+        print(f"Epoch {epoch}: loss={loss.item():.4f}")
 
-# Save model and mappings
-torch.save(model.state_dict(), \"data/task_model.pth\")
-with open(\"data/task_names.json\", \"w\") as f:
-    json.dump(task_names, f)
+# Save model and task names
+torch.save(model.state_dict(), "data/task_model.pth")
+with open("data/task_names.json", "w") as f:
+    json.dump(tasks, f)
