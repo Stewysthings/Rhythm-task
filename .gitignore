@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# VSCode settings (if using VSCode)
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Data files (like task logs or models if they’re not version-controlled)
+data/task_logs.json
+data/task_model.pth
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Python egg metadata and distribution artifacts
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# Environment variable files
+.env
