@@ -1,6 +1,6 @@
 
   [
-  {"task": "Art Practice", "hour": 14, "day_of_week": 6},
+{"task": "Art Practice", "hour": 14, "day_of_week": 6},
   {"task": "Art Session", "hour": 14, "day_of_week": 3},
   {"task": "Art Studio", "hour": 13, "day_of_week": 0},
   {"task": "Attend meeting", "hour": 11, "day_of_week": 2},
@@ -32,7 +32,7 @@
   {"task": "Declutter workspace", "hour": 13, "day_of_week": 1},
   {"task": "Make dentist appointment", "hour": 18, "day_of_week": 0},
   {"task": "Shower", "hour": 18, "day_of_week": 2},
-  {"task": "Do laundry", "hour": 9, "day_of_week": 2},
+  {"task": "Call caterers", "hour": 9, "day_of_week": 2},
   {"task": "Do laundry", "hour": 15, "day_of_week": 6},
   {"task": "Do morning exercise", "hour": 6, "day_of_week": 0},
   {"task": "Do yoga", "hour": 6, "day_of_week": 3},
@@ -89,7 +89,7 @@
   {"task": "Feed horses", "hour": 15, "day_of_week": 0},
   {"task": "Clean gutters", "hour": 20, "day_of_week": 3},
   {"task": "Pay stable fee", "hour": 19,"day_of_week": 1},
-
+  
 {"task": "Pet care", "hour": 9, "day_of_week": 1},
 {"task": "Phone call", "hour": 14, "day_of_week": 4},
 {"task": "Plan trip", "hour": 13, "day_of_week": 1},

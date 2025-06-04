@@ -1,0 +1,1202 @@
+[
+  {
+    "task_category": "cooking",
+    "hour": 22,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 20,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 0,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 10,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 10,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 16,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 21,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 1,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 15,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 3,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 22,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 15,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 12,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 17,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 14,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 21,
+    "day_of_week": 1,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 1,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 13,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 2,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 17,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 15,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 13,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 19,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 20,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 16,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 9,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 5,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 0,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 4,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 3,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 12,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 23,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 16,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 6,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 4,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 3,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 8,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 4,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 15,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 5,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 10,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 12,
+    "day_of_week": 1,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 15,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 4,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 21,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 10,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 3,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 0,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 6,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 12,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 14,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 21,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 18,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 5,
+    "day_of_week": 0,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 23,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 22,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 21,
+    "day_of_week": 0,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 17,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 12,
+    "day_of_week": 1,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 21,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 11,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 10,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "cooking",
+    "hour": 4,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 21,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 22,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 18,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 23,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 22,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 17,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 14,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 6,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 4,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 17,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 15,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 19,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 22,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 12,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 2,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 0,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 23,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 6,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 6,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 2,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 15,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 9,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 1,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 9,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 14,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 21,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 14,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 21,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 5,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 12,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 4,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 12,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 19,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 19,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 14,
+    "day_of_week": 0,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 3,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 13,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 0,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 15,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 8,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 17,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 10,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 0,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 22,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 17,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 22,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 6,
+    "day_of_week": 1,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 0,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 17,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 16,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 11,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 5,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 9,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 15,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 0,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 12,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 11,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 5,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 2,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 12,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 9,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 13,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 20,
+    "day_of_week": 2,
+    "done": 1
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 2,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 18,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 0,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 8,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 11,
+    "day_of_week": 0,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 20,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 11,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 22,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 23,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 10,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 7,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 20,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 6,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 14,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 21,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 15,
+    "day_of_week": 1,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 9,
+    "day_of_week": 5,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 15,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 1,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 15,
+    "day_of_week": 1,
+    "done": 1
+  },
+  {
+    "task_category": "cooking",
+    "hour": 11,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 9,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 21,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 5,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 17,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 14,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 17,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 9,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 6,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 8,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 21,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 1,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 20,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 12,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 6,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 4,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 5,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "cooking",
+    "hour": 4,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 2,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 16,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 7,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 17,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 15,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 7,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 7,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 2,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 18,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 6,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 19,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 18,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 2,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "exercise",
+    "hour": 7,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 17,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 12,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 1,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 5,
+    "day_of_week": 0,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 6,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "communication",
+    "hour": 17,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "communication",
+    "hour": 1,
+    "day_of_week": 0,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 11,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 5,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 22,
+    "day_of_week": 5,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 22,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 0,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "shopping",
+    "hour": 8,
+    "day_of_week": 6,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 20,
+    "day_of_week": 6,
+    "done": 1
+  },
+  {
+    "task_category": "shopping",
+    "hour": 8,
+    "day_of_week": 4,
+    "done": 1
+  },
+  {
+    "task_category": "work",
+    "hour": 15,
+    "day_of_week": 3,
+    "done": 1
+  },
+  {
+    "task_category": "cleaning",
+    "hour": 8,
+    "day_of_week": 1,
+    "done": 0
+  },
+  {
+    "task_category": "work",
+    "hour": 1,
+    "day_of_week": 2,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 23,
+    "day_of_week": 0,
+    "done": 1
+  },
+  {
+    "task_category": "exercise",
+    "hour": 11,
+    "day_of_week": 3,
+    "done": 0
+  },
+  {
+    "task_category": "relaxation",
+    "hour": 14,
+    "day_of_week": 4,
+    "done": 0
+  },
+  {
+    "task_category": "cooking",
+    "hour": 13,
+    "day_of_week": 1,
+    "done": 1
+  }
+]
