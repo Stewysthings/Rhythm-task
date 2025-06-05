@@ -1,76 +1,132 @@
-import json
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from data_preparation import load_and_prepare_data
+from torch.utils.data import TensorDataset, DataLoader
+from sklearn.model_selection import train_test_split
+import json
+import numpy as np
 
 # Load data
-X_train, X_val, X_test, y_train, y_val, y_test, tasks, task_to_idx = load_and_prepare_data(filename="data/synthetic_task_logs.json")
+def load_and_prepare_data(filename="data/synthetic_task_logs.json"):
+    with open(filename, "r") as f:
+        logs = json.load(f)
 
-# Define a deeper MLP model
-class MLP(nn.Module):
-    def __init__(self, input_dim, hidden_dims, output_dim):
-        super(MLP, self).__init__()
-        layers = []
-        prev_dim = input_dim
-        for h_dim in hidden_dims:
-            layers.append(nn.Linear(prev_dim, h_dim))
-            layers.append(nn.ReLU())
-            layers.append(nn.Dropout(0.2))  # Prevent overfitting
-            prev_dim = h_dim
-        layers.append(nn.Linear(prev_dim, output_dim))
-        self.model = nn.Sequential(*layers)
+    # Extract features and labels
+    hours = [log["hour"] for log in logs]
+    days = [log["day_of_week"] for log in logs]
+    categories = [log["task_category"] for log in logs]
+    done_flags = [log["done"] for log in logs]
+
+    # One-hot encode categories
+    unique_tasks = sorted(set(categories))
+    task_to_idx = {task: idx for idx, task in enumerate(unique_tasks)}
+    y = [task_to_idx[cat] for cat in categories]
+
+    X = np.stack([hours, days, done_flags], axis=1)
+
+    # Train/val/test split
+    X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+    X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.2, stratify=y_temp, random_state=42)
+
+    print("Number of classes after filtering:", len(unique_tasks))
+    print("Total samples after filtering:", len(X))
+    print(f"Train size: {len(X_train)}, Validation size: {len(X_val)}, Test size: {len(X_test)}")
+    print("Unique tasks in y_train:", torch.unique(torch.tensor(y_train)))
+    print("Classes:", unique_tasks)
+    return (torch.tensor(X_train, dtype=torch.float32),
+            torch.tensor(X_val, dtype=torch.float32),
+            torch.tensor(X_test, dtype=torch.float32),
+            torch.tensor(y_train, dtype=torch.long),
+            torch.tensor(y_val, dtype=torch.long),
+            torch.tensor(y_test, dtype=torch.long),
+            unique_tasks, task_to_idx)
+
+# Model
+class TaskPredictor(nn.Module):
+    def __init__(self, input_size, hidden_size, num_classes):
+        super(TaskPredictor, self).__init__()
+        self.model = nn.Sequential(
+            nn.Linear(input_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, num_classes)
+        )
 
     def forward(self, x):
         return self.model(x)
 
-# Hyperparameters
-input_dim = X_train.shape[1]
-hidden_dims = [64, 32]  # Two hidden layers
-output_dim = len(tasks)
-num_epochs = 50
-batch_size = 16
-learning_rate = 0.001
+# Training function
+def train_model(X_train, y_train, X_val, y_val, num_classes, num_epochs=100, batch_size=64, lr=0.0005):
+    train_dataset = TensorDataset(X_train, y_train)
+    val_dataset = TensorDataset(X_val, y_val)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
-# Model, loss, optimizer
-model = MLP(input_dim, hidden_dims, output_dim)
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = TaskPredictor(input_size=3, hidden_size=128, num_classes=num_classes).to(device)
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=lr)
 
-# Training loop
-def train():
-    model.train()
-    for i in range(0, len(X_train), batch_size):
-        X_batch = X_train[i:i+batch_size]
-        y_batch = y_train[i:i+batch_size]
+    for epoch in range(num_epochs):
+        model.train()
+        train_loss = 0
+        for inputs, labels in train_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
 
-        optimizer.zero_grad()
-        outputs = model(X_batch)
-        loss = criterion(outputs, y_batch)
-        loss.backward()
-        optimizer.step()
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
 
-def evaluate(X, y):
+            train_loss += loss.item()
+
+        # Validation
+        model.eval()
+        val_loss = 0
+        correct = 0
+        total = 0
+        with torch.no_grad():
+            for inputs, labels in val_loader:
+                inputs, labels = inputs.to(device), labels.to(device)
+                outputs = model(inputs)
+                loss = criterion(outputs, labels)
+                val_loss += loss.item()
+                _, predicted = torch.max(outputs, 1)
+                correct += (predicted == labels).sum().item()
+                total += labels.size(0)
+
+        val_acc = correct / total
+        if epoch % 10 == 0 or epoch == num_epochs - 1:
+            print(f"Epoch {epoch}: Train Loss={train_loss/len(train_loader):.4f}, "
+                  f"Val Loss={val_loss/len(val_loader):.4f}, Val Acc={val_acc:.4f}")
+
+    return model
+
+# Evaluation
+def evaluate_model(model, X_test, y_test):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
     model.eval()
+    X_test, y_test = X_test.to(device), y_test.to(device)
     with torch.no_grad():
-        outputs = model(X)
-        loss = criterion(outputs, y)
+        outputs = model(X_test)
+        criterion = nn.CrossEntropyLoss()
+        loss = criterion(outputs, y_test)
         _, predicted = torch.max(outputs, 1)
-        acc = (predicted == y).float().mean().item()
-    return loss.item(), acc
+        acc = (predicted == y_test).float().mean().item()
+    print(f"Final Test Loss: {loss.item():.4f}, Test Accuracy: {acc:.4f}")
 
-# Main training loop
-for epoch in range(num_epochs):
-    train()
-    val_loss, val_acc = evaluate(X_val, y_val)
-    if epoch % 10 == 0 or epoch == num_epochs - 1:
-        train_loss, _ = evaluate(X_train, y_train)
-        print(f"Epoch {epoch}: Train Loss={train_loss:.4f}, Val Loss={val_loss:.4f}, Val Acc={val_acc:.4f}")
 
-# Final test evaluation
-test_loss, test_acc = evaluate(X_test, y_test)
-print(f"Final Test Loss: {test_loss:.4f}, Test Accuracy: {test_acc:.4f}")
+# Main
+if __name__ == "__main__":
+   X_train, X_val, X_test, y_train, y_val, y_test, tasks, task_to_idx = load_and_prepare_data(filename="data/structured_synthetic_task_logs.json")
 
-# Save model
+ # Call train_model and get the trained model
+   model = train_model(X_train, y_train, X_val, y_val, num_classes=len(tasks), num_epochs=100, batch_size=64, lr=0.0005)
+
+
 torch.save(model.state_dict(), "task_model_deep.pth")
 print("Training complete and model saved as 'task_model_deep.pth'.")
+evaluate_model(model, X_test, y_test)
